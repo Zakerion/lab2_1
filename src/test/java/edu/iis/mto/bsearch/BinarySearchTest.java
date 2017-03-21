@@ -28,4 +28,11 @@ public class BinarySearchTest {
 		assertThat(result.getPosition(), Matchers.equalTo(1));
 	}
 
+	@Test
+	public void isLastElementInSeq() {
+		int[] seq = new int[] { 1, 2, 3, 4, 5 };
+		SearchResult result = BinarySearch.search(5, seq);
+		assertThat(result.getPosition(), Matchers.equalTo(seq.length));
+	}
+
 }
