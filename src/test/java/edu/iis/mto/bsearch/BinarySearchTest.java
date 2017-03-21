@@ -14,4 +14,10 @@ public class BinarySearchTest {
 		assertThat(result.isFound(), Matchers.equalTo(true));
 	}
 
+	@Test
+	public void isNotInSeq() {
+		int[] seq = new int[] { 3 };
+		SearchResult result = BinarySearch.search(5, seq);
+		assertThat(result.isFound(), Matchers.equalTo(false));
+	}
 }
