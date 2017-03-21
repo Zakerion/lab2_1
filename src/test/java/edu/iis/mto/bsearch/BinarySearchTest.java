@@ -41,5 +41,12 @@ public class BinarySearchTest {
 		SearchResult result = BinarySearch.search(3, seq);
 		assertThat(result.getPosition(), Matchers.equalTo((seq.length / 2) + 1));
 	}
+
+	@Test
+	public void isNotInSeq2() {
+		int[] seq = new int[] { 1, 2, 3, 4, 5 };
+		SearchResult result = BinarySearch.search(7, seq);
+		assertThat(result.isFound(), Matchers.equalTo(false));
+	}
 	
 }
