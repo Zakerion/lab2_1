@@ -55,4 +55,19 @@ public class BinarySearchTest {
 		BinarySearch.search(5, seq);
 	}
 
+	@Test
+	public void decSeq() {
+		int[] seq = new int[] { 5, 4, 3, 2, 1 };
+		SearchResult result = BinarySearch.search(3, seq);
+		assertThat(result.isFound(), Matchers.equalTo(true));
+	}
+
+	@Test
+	public void notOrderedSeq() {
+		int[] seq = new int[] { 3, 2, 5, 1, 4 };
+		SearchResult result = BinarySearch.search(1, seq);
+		assertThat(result.isFound(), Matchers.equalTo(false));
+		assertThat(result.getPosition(), Matchers.equalTo(-1));
+	}
+
 }
