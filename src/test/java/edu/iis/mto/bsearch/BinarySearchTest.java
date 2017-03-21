@@ -20,4 +20,12 @@ public class BinarySearchTest {
 		SearchResult result = BinarySearch.search(5, seq);
 		assertThat(result.isFound(), Matchers.equalTo(false));
 	}
+
+	@Test
+	public void isFirstElementInSeq() {
+		int[] seq = new int[] { 1, 2, 3, 4, 5 };
+		SearchResult result = BinarySearch.search(1, seq);
+		assertThat(result.getPosition(), Matchers.equalTo(1));
+	}
+
 }
