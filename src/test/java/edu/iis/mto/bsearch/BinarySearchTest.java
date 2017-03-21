@@ -35,4 +35,11 @@ public class BinarySearchTest {
 		assertThat(result.getPosition(), Matchers.equalTo(seq.length));
 	}
 
+	@Test
+	public void isCentralElementInSeq() {
+		int[] seq = new int[] { 1, 2, 3, 4, 5 };
+		SearchResult result = BinarySearch.search(3, seq);
+		assertThat(result.getPosition(), Matchers.equalTo((seq.length / 2) + 1));
+	}
+	
 }
